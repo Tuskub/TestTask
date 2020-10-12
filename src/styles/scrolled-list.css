@@ -1,0 +1,12 @@
+.scrolled-list {
+  display: flex;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  outline:none;
+}
+
+.scrolled-list li {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}

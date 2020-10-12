@@ -1,24 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="321cd88a-0c70-42c0-b570-a7a6783f4e53" name="Default Changelist" comment="" />
+    <list default="true" id="321cd88a-0c70-42c0-b570-a7a6783f4e53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="HTML4 File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ibl6BxYa30ztrpH7ds3BC0lW2c" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML4 File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/fonts" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/fonts" />
+      <recent name="$PROJECT_DIR$/static/image/icons" />
+      <recent name="$PROJECT_DIR$/static/image/loader" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/image/movie/posters" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/static/scripts" />
+      <recent name="$PROJECT_DIR$/static/image/movie" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -28,11 +83,60 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602183995217</updated>
-      <workItem from="1602183996917" duration="648000" />
+      <workItem from="1602183996917" duration="2764000" />
+      <workItem from="1602211189667" duration="20276000" />
+      <workItem from="1602234352053" duration="3747000" />
+      <workItem from="1602239370738" duration="9956000" />
+      <workItem from="1602254190471" duration="2897000" />
+      <workItem from="1602262188455" duration="4005000" />
+      <workItem from="1602300100061" duration="1572000" />
+      <workItem from="1602305675020" duration="8465000" />
+      <workItem from="1602316857529" duration="1755000" />
+      <workItem from="1602321032319" duration="9846000" />
+      <workItem from="1602342901771" duration="1965000" />
+      <workItem from="1602347039033" duration="851000" />
+      <workItem from="1602350417955" duration="6609000" />
+      <workItem from="1602386225857" duration="7675000" />
+      <workItem from="1602398257984" duration="21878000" />
+      <workItem from="1602421324064" duration="21786000" />
+      <workItem from="1602466197314" duration="1628000" />
+      <workItem from="1602471645786" duration="15637000" />
+      <workItem from="1602491625547" duration="11401000" />
+      <workItem from="1602515599049" duration="10131000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="585" y="225" width="740" height="663" key="#Inspections" timestamp="1602330370264">
+      <screen x="0" y="37" width="1920" height="1043" />
+    </state>
+    <state x="585" y="225" width="740" height="663" key="#Inspections/0.37.1920.1043@0.37.1920.1043" timestamp="1602330370264" />
+    <state x="604" y="212" width="702" height="689" key="#JavaScript" timestamp="1602218986990">
+      <screen x="0" y="37" width="1920" height="1043" />
+    </state>
+    <state x="604" y="212" width="702" height="689" key="#JavaScript/0.37.1920.1043@0.37.1920.1043" timestamp="1602218986990" />
+    <state x="322" y="103" key="SettingsEditor" timestamp="1602496273942">
+      <screen x="0" y="37" width="1920" height="1043" />
+    </state>
+    <state x="322" y="103" key="SettingsEditor/0.37.1920.1043@0.37.1920.1043" timestamp="1602496273942" />
+    <state x="0" y="37" width="1893" height="991" key="dock-window-1" timestamp="1602497746277">
+      <screen x="0" y="37" width="1920" height="1043" />
+    </state>
+    <state x="0" y="37" width="1893" height="991" key="dock-window-1/0.37.1920.1043@0.37.1920.1043" timestamp="1602497746277" />
   </component>
 </project>

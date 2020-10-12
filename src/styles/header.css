@@ -1,0 +1,36 @@
+.header-buttons {
+  text-align: center;
+}
+
+.header-buttons li {
+  height: 52px;
+  overflow: hidden;
+}
+
+.header-buttons li:last-child {
+  float: right;
+}
+
+.header-buttons ul {
+  margin-top: 10px;
+  padding: 0;
+}
+
+#search {
+  position: relative;
+  margin-right: 30px;
+  margin-left: 75px;
+  top: -52px;
+}
+
+#play {
+  position: relative;
+  top: -156px;
+  filter: hue-rotate(80deg) brightness(70%);
+}
+
+#settings {
+  position: relative;
+  padding-right: 20px;
+  top: -52px;
+}

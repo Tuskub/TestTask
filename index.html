@@ -3,16 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>Список фильмов</title>
+
+  <link rel="stylesheet" href="src/styles/category.css" type="text/css">
+  <link rel="stylesheet" href="src/styles/header.css" type="text/css">
+  <link rel="stylesheet" href="src/styles/loader.css" type="text/css">
+  <link rel="stylesheet" href="src/styles/movie.css" type="text/css">
+  <link rel="stylesheet" href="src/styles/movie-info.css" type="text/css">
+  <link rel="stylesheet" href="src/styles/scrolled-list.css" type="text/css">
+  <link rel="stylesheet" href="src/styles/underscore.css" type="text/css">
+  <link rel="stylesheet" href="src/styles/main.css" type="text/css">
+
+  <script type="application/javascript" src="src/scripts/data.js"></script>
+  <script type="application/javascript" src="src/scripts/scroll.js"></script>
+  <script type="application/javascript" src="src/scripts/moving.js"></script>
+  <script type="application/javascript" src="src/scripts/list.js"></script>
+  <script type="application/javascript" src="src/scripts/category.js"></script>
+  <script type="application/javascript" src="src/scripts/movie.js"></script>
+  <script type="application/javascript" src="src/scripts/displaylist.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
+  <div class="bg-image"></div>
+  <div class="border-shadow"></div>
+  <div id="loader">
+    <img src="src/image/loader/loader.gif">
+  </div>
+  <div class="content">
+    <header class="header-buttons">
       <ul>
-        <button>Search</button>
-        <button>Play</button>
-        <button>Options</button>
+        <li><input type="image" id="search" src="src/image/icons/menubar-search-icon.png"></li>
+        <li><input type="image" id="play" src="src/image/icons/menubar-vod-icon.png"></li>
+        <li><input type="image" id="settings" src="src/image/icons/menubar-settings-icon.png"></li>
       </ul>
-    </nav>
-  </header>
+    </header>
+    <div class="category-container">
+    </div>
+    <div class="movie-container">
+    </div>
+    <footer class="movie-info">
+      <h2 id="title"><strong></strong></h2>
+      <ul class="movie-info">
+        <li id="country-year"></li>
+        <li id="category"></li>
+        <li id="age" class="age-rating"></li>
+        <li>IMDb:
+          <p id="imdb"></p>
+          <img src="src/image/icons/rating-star-icon.png" alt="star"/>
+        </li>
+        <li>Кинопоиск:
+          <p id="kinopoisk"></p>
+          <img src="src/image/icons/rating-star-icon.png"/>
+        </li>
+      </ul>
+    </footer>
+  </div>
+<script type="text/javascript" src="src/scripts/main.js"></script>
 </body>
 </html>

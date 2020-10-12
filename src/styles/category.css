@@ -1,0 +1,36 @@
+.category-container {
+  margin-top: 10px;
+  padding: 0;
+  color: #bababa;
+}
+
+.category-container ul {
+  height: var(--category-heigth);
+  text-align: center;
+}
+
+.category {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category:first-child {
+  padding-left: 15px;
+}
+
+.category:last-child {
+  padding-right: 100%;
+}
+
+.category p {
+  margin: 0;
+  padding: 0;
+}
+
+.selected-category {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem !important;
+}

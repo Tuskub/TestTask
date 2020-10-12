@@ -1,0 +1,45 @@
+:root {
+  --image-height: 324px;
+  --image-width: 216px;
+
+  --underscore-image-height: calc(var(--image-height) * 1.25);
+  --underscore-image-width: calc(var(--image-width) * 1.25);
+
+  --underscopeHrColor: #8c24ae;
+
+  --underscore-offset: calc(50% - (var(--underscore-image-width) / 2));
+
+  --offset-loader: calc(50% - 32px);
+
+  --movie-heigth: calc(var(--underscore-image-height) + 15px);
+  --category-heigth: 60px;
+}
+
+html {
+  font-size: 20px;
+  font-family: sans-serif, Helvetica, Geneva, Arial;
+}
+
+body {
+  height: 100%;
+  background: black;
+  color: white;
+}
+
+.content {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  height: 100%;
+  z-index: 10;
+  -webkit-box-shadow: inset 0px -16px 35px 36px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px -16px 35px 36px rgba(0,0,0,0.75);
+  box-shadow: inset 0px -16px 35px 36px rgba(0,0,0,0.75);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
