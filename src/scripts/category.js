@@ -15,7 +15,7 @@ var Category = (function () {
       if (index !== -1) {
         filteredMovie.push(moviesList[i]);
       }
-    }
+    };
     console.log(filteredMovie)
     return filteredMovie;
   };
@@ -24,7 +24,7 @@ var Category = (function () {
   var _actionAfterScroll = function (categoryName) {
     var filteredMoviesPrev = _filterMovie(categoryName);
     displayMoviesList(filteredMoviesPrev, Movie.container, Movie.list);
-  }
+  };
 
   myCategory.horizontalScrollList = HorizontalScroll.create(
     _selectedCategory,
@@ -50,7 +50,7 @@ var Category = (function () {
     ul = myCategory.fillList(categoriesList);
     ul.firstChild.classList.add("selected-category");
     container.appendChild(ul);
-  }
+  };
 
   myCategory.actionIfListEmpty = function actionIfCategoryListEmpty(container, ul) {}
 

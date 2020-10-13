@@ -7,8 +7,8 @@ var DisplayList = (function () {
         } else {
           actionIfListEmpty(container, ul);
         }
-      }
+      };
     }
-  }
+  };
 })();
 

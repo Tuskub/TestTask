@@ -52,7 +52,7 @@ var HorizontalScroll = (function () {
         case 39:
           scrollListItem(selected, false);
           break;
-      }
+      };
     };
   };
 

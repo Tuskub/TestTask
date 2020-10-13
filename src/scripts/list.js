@@ -22,7 +22,7 @@ var List = (function () {
         ul.appendChild(li);
       }
       return ul;
-    }
+    };
   };
   return myList;
 })();

@@ -26,7 +26,7 @@ var Movie = (function () {
   // Конкретная реализация прокрутки для фильмов
   var _actionAfterScroll = function (id) {
     myMovie.fillInfo(id);
-  }
+  };
 
   myMovie.horizontalScrollList = HorizontalScroll.create(
     _selectedMovie,
@@ -57,7 +57,7 @@ var Movie = (function () {
     myMovie.fillInfo(ul.firstChild.id);
     container.replaceChild(ul, container.firstChild);
     document.querySelector(".movie-info").style.visibility = "visible";
-  }
+  };
 
   myMovie.actionIfListEmpty = function (container, ul) {
     var p = document.createElement("p");
@@ -65,7 +65,7 @@ var Movie = (function () {
     container.replaceChild(p, ul);
     document.querySelector(".movie-info").style.visibility = "hidden";
     myMovie.info.background.style.background = "";
-  }
+  };
 
   return myMovie;
 })();

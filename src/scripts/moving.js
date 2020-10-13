@@ -5,7 +5,7 @@ var VerticalFocus = (function () {
     return function setFocus (e) {
       var underscoreElement = document.querySelector("." + cssClass);
       underscoreElement.classList.add("underscore");
-    }
+    };
   };
 
   vertFocus.lost = function (e) {
@@ -23,7 +23,7 @@ var VerticalFocus = (function () {
       case 40:
         document.querySelector("ul[tabindex='1']").focus();
         break;
-    }
+    };
   };
 
   return vertFocus;
