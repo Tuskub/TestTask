@@ -2,6 +2,7 @@ var Movie = (function () {
   var myMovie = {};
   var _selectedMovie = "selected-movie";
   myMovie.info = {};
+  myMovie.container = null;
   myMovie.setFocusOnList = VerticalFocus.set(_selectedMovie);
 
   // Конкретная реализация прокрутки для фильмов
@@ -43,6 +44,9 @@ var Movie = (function () {
     li.appendChild(img);
     return li;
   };
+
+  myMovie.list = List.create(1, myMovie.horizontalScrollList, myMovie.setFocusOnList);
+  myMovie.fillList = List.fill(myMovie.list, myMovie.createListElement);
 
   return myMovie;
 })();

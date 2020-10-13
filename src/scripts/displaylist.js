@@ -1,5 +1,5 @@
 function actionIfMovieListNotEmpty(moviesList, container, ul) {
-  ul = fillMovieList(moviesList);
+  ul = Movie.fillList(moviesList);
   ul.firstChild.classList.add("selected-movie");
   Movie.fillInfo(ul.firstChild.id);
   container.replaceChild(ul, container.firstChild);
@@ -15,7 +15,7 @@ function actionIfMovieListEmpty(container, ul) {
 }
 
 function actionIfCategoryListNotEmpty(categoriesList, container, ul) {
-  ul = fillCategoryList(categoriesList);
+  ul = Category.fillList(categoriesList);
   ul.firstChild.classList.add("selected-category");
   container.appendChild(ul);
 }

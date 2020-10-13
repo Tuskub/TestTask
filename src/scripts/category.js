@@ -2,6 +2,7 @@ var Category = (function () {
   var myCategory = {};
   //  css класс для выбранной категории
   var _selectedCategory = "selected-category";
+  myCategory.container = null;
   myCategory.setFocusOnList = VerticalFocus.set(_selectedCategory);
   //  Возвращает список фильмов которые соответствуют выбранной категории
   var _filterMovie = function (category) {
@@ -22,7 +23,7 @@ var Category = (function () {
   // Конкретная реализация прокрутки для категорий
   var _actionAfterScroll = function (categoryName) {
     var filteredMoviesPrev = _filterMovie(categoryName);
-    displayMoviesList(filteredMoviesPrev, movieContainer, movieUL);
+    displayMoviesList(filteredMoviesPrev, Movie.container, Movie.list);
   }
 
   myCategory.horizontalScrollList = HorizontalScroll.create(
@@ -41,6 +42,9 @@ var Category = (function () {
     li.appendChild(p);
     return li;
   };
+
+  myCategory.list = List.create(2, myCategory.horizontalScrollList, myCategory.setFocusOnList);
+  myCategory.fillList = List.fill(myCategory.list, myCategory.createListElement);
 
   return myCategory;
 })();
