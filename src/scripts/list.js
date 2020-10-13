@@ -2,8 +2,8 @@
 function fillList (ul, createListElement) {
   return function (list) {
     ul.innerHTML = "";
-    for (var element of list) {
-      var li = createListElement(element);
+    for (var i = 0; i < list.length; i++) {
+      var li = createListElement(list[i]);
       ul.appendChild(li);
     }
     return ul;
