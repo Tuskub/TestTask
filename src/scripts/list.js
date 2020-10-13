@@ -1,5 +1,5 @@
 var list = (function () {
-  myList = { }
+  var myList = {}
 
   // Создает объект ul и привязывает к нему переданные события
   myList.create = function (tabIndex, horizontalScrollList, setFocusOnList) {

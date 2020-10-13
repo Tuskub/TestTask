@@ -1,7 +1,7 @@
 // Main часть ;)
 
 // Переменная, содержащая инофрмацию о расположении элеменов связанных с Информацией о фильме в DOM
-var movieInfo = {
+movie.info = {
   title: document.getElementById("title"),
   countryYear: document.getElementById("country-year"),
   category: document.getElementById("category"),
@@ -19,9 +19,9 @@ var displayMoviesList = displayList(actionIfMovieListNotEmpty, actionIfMovieList
 var displayCategoryList = displayList(actionIfCategoryListNotEmpty, actionIfCategoryListEmpty);
 
 // Создание пустого списка фильмов
-var movieUL = list.create(1, horizontalScrollMovieList, setFocusOnMovieList);
+var movieUL = list.create(1, movie.horizontalScrollList, movie.setFocusOnList);
 // Создание функции для заполнения списка элементами
-var fillMovieList = list.fill(movieUL, createMovieListElement);
+var fillMovieList = list.fill(movieUL, movie.createListElement);
 
 // Создание пустого списка категорий
 var categoryUL = list.create(2, horizontalScrollCategoryList, setFocusOnCategoryList);

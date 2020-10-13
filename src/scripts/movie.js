@@ -1,52 +1,51 @@
-//  Заполняет информацию о фильме в нижней части экрана
-function fillMovieInfo(movieID) {
-  var movieIndex = moviesList.findIndex(function (movie) {
-    return movie.id === movieID;
-  });
-  var selectedMovie = moviesList[movieIndex];
-  var countryYear = selectedMovie.country.join(", ") + ", " + selectedMovie.year;
-  movieInfo.title.innerText = selectedMovie.title;
-  movieInfo.countryYear.innerText = countryYear;
-  movieInfo.category.innerText = selectedMovie.category.join(", ");
-  movieInfo.imdb.innerText = selectedMovie.imdb;
-  movieInfo.kinopoisk.innerText = selectedMovie.kinopoisk;
-  movieInfo.age.innerText = moviesList[movieIndex].age;
-  movieInfo.background.style.backgroundImage = "url('" + selectedMovie.poster + "')";
-}
+var movie = (function () {
 
-function createMovieListElement(movie) {
-  var li = document.createElement("li");
-  var img = document.createElement("img");
-  li.id = movie.id;
-  img.src = movie.poster;
-  img.alt = "Постер фильма " + movie.title;
-  li.classList.add("movie");
-  li.appendChild(img);
-  return li;
-}
+  var myMovie = { }
 
-var selectedMovieClass = "selected-movie";
+  var selectedMovieClass = "selected-movie";
 
-var setFocusOnMovieList = verticalFocus.set(selectedMovieClass);
+  myMovie.setFocusOnList = verticalFocus.set(selectedMovieClass);
 
-// Конкретная реализация прокрутки для фильмов
+  // Конкретная реализация прокрутки для фильмов
+  var actionAfterScrollMovie = function(id) {
+    movie.fillInfo(id);
+  }
 
-function actionAfterScrollMovie(id) {
-  fillMovieInfo(id);
-}
-//
-// var scrollToMovie = scrollToElement(selectedMovieClass, "center");
-// var scrollMovieListItem = scrollListItem(
-//   selectedMovieClass,
-//   scrollToMovie,
-//   actionAfterScrollMovie,
-//   "id",
-//   0
-// );
-var horizontalScrollMovieList = horizontalScroll.create(
-  selectedMovieClass,
-  "center",
-  actionAfterScrollMovie,
-  "id",
-  0
-);
+  myMovie.horizontalScrollList = horizontalScroll.create(
+    selectedMovieClass,
+    "center",
+    actionAfterScrollMovie,
+    "id",
+    0
+  );
+
+  myMovie.info = {}
+  //  Заполняет информацию о фильме в нижней части экрана
+  myMovie.fillInfo =  function (id) {
+    var movieIndex = moviesList.findIndex(function (movie) {
+      return movie.id === id;
+    });
+    var selectedMovie = moviesList[movieIndex];
+    var countryYear = selectedMovie.country.join(", ") + ", " + selectedMovie.year;
+    myMovie.info.title.innerText = selectedMovie.title;
+    myMovie.info.countryYear.innerText = countryYear;
+    myMovie.info.category.innerText = selectedMovie.category.join(", ");
+    myMovie.info.imdb.innerText = selectedMovie.imdb;
+    myMovie.info.kinopoisk.innerText = selectedMovie.kinopoisk;
+    myMovie.info.age.innerText = moviesList[movieIndex].age;
+    myMovie.info.background.style.backgroundImage = "url('" + selectedMovie.poster + "')";
+  };
+
+  myMovie.createListElement = function (movie) {
+    var li = document.createElement("li");
+    var img = document.createElement("img");
+    li.id = movie.id;
+    img.src = movie.poster;
+    img.alt = "Постер фильма " + movie.title;
+    li.classList.add("movie");
+    li.appendChild(img);
+    return li;
+  };
+
+  return myMovie;
+})();

@@ -1,7 +1,7 @@
 function actionIfMovieListNotEmpty(moviesList, container, ul) {
   ul = fillMovieList(moviesList);
   ul.firstChild.classList.add("selected-movie");
-  fillMovieInfo(ul.firstChild.id);
+  movie.fillInfo(ul.firstChild.id);
   container.replaceChild(ul, container.firstChild);
   document.querySelector(".movie-info").style.visibility = "visible";
 }
@@ -11,7 +11,7 @@ function actionIfMovieListEmpty(container, ul) {
   p.textContent = "В выбранной категории фильмы отсутствуют";
   container.replaceChild(p, ul);
   document.querySelector(".movie-info").style.visibility = "hidden";
-  movieInfo.background.style.background = "";
+  movie.info.background.style.background = "";
 }
 
 function actionIfCategoryListNotEmpty(categoriesList, container, ul) {

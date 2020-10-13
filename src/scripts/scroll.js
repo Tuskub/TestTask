@@ -1,13 +1,13 @@
 var horizontalScroll = (function () {
   //  Настройка появления элемента при скроле к нему
-  var _scrollToElement = function (selectedClass, inline) {
+  var _scrollToElement = function(selectedClass, inline) {
     return function (element) {
       element.scrollIntoView({inline: inline});
     };
   };
 
   //  Возвращает функцию, которая отвечает за смену текущего элемента на предыдущий или последующий
-  var _scrollListItem = function (selectedClass, scrollToElement, actionAfterScroll, param, timeout) {
+  var _scrollListItem = function(selectedClass, scrollToElement, actionAfterScroll, param, timeout) {
     return function (element, toLeftSide) {
       var scrollableItem = null;
       //  Узнаём в какую сторону необходимо прокрутить список
@@ -39,7 +39,7 @@ var horizontalScroll = (function () {
   };
   //  Результирующая функция, которая реализует функцианал перемещения элементов списка
   //  при нажатии на стрелки вправо-влево
-  var _horizontalScrollList = function (scrollListItem) {
+  var _horizontalScrollList = function(scrollListItem) {
     return function (e) {
       var selected = document.querySelector(".underscore");
       switch (e.keyCode) {
