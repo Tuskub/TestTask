@@ -44,9 +44,3 @@ var scrollMovieListItem = scrollListItem(
   0
 );
 var horizontalScrollMovieList = horizontalScrollList(scrollMovieListItem);
-
-// Создание пустого списка фильмов
-var movieUL = createList(1, horizontalScrollMovieList, setFocusOnMovieList);
-
-// Создание функции для заполнения списка элементами
-var fillMovieList = fillList(movieUL, createMovieListElement);

@@ -1,25 +1,35 @@
-function displayMoviesList(moviesList) {
-  var div = movieContainer;
-  
-  if (moviesList.length !== 0) {
-    movieUL = fillMovieList(moviesList);
-    fillMovieInfo(movieUL.firstChild.id);
-    movieUL.firstChild.classList.add("selected-movie");
-    div.replaceChild(movieUL, div.firstChild);
-    document.querySelector(".movie-info").style.visibility = "visible";
-
-  } else {
-    var p = document.createElement("p");
-    p.textContent = "В выбранной категории фильмы отсутствуют";
-    div.replaceChild(p, movieUL);
-    document.querySelector(".movie-info").style.visibility = "hidden";
-    movieInfo.background.style.background = "";
-  }
+function actionIfMovieListNotEmpty(moviesList, container, ul) {
+  ul = fillMovieList(moviesList);
+  ul.firstChild.classList.add("selected-movie");
+  fillMovieInfo(ul.firstChild.id);
+  container.replaceChild(ul, container.firstChild);
+  document.querySelector(".movie-info").style.visibility = "visible";
 }
 
-function displayCategoryList(categoriesList) {
-  var div = categoryContainer;
-  categoryUL = fillCategoryList(categoriesList);
-  categoryUL.firstChild.classList.add("selected-category");
-  div.appendChild(categoryUL);
+function actionIfMovieListEmpty(container, ul) {
+  var p = document.createElement("p");
+  p.textContent = "В выбранной категории фильмы отсутствуют";
+  container.replaceChild(p, ul);
+  document.querySelector(".movie-info").style.visibility = "hidden";
+  movieInfo.background.style.background = "";
+}
+
+function actionIfCategoryListNotEmpty(categoriesList, container, ul) {
+  ul = fillCategoryList(categoriesList);
+  ul.firstChild.classList.add("selected-category");
+  container.appendChild(ul);
+}
+
+function actionIfCategoryListEmpty(container, ul) {
+
+}
+
+function displayList(actionIfListNotEmpty, actionIfListEmpty) {
+  return function (moviesList, container, ul) {
+    if (moviesList.length !== 0) {
+      actionIfListNotEmpty(moviesList, container, ul);
+    } else {
+      actionIfListEmpty(container, ul);
+    }
+  }
 }

@@ -31,7 +31,7 @@ var setFocusOnCategoryList = setFocus(selectedCategory);
 // Конкретная реализация прокрутки для категорий
 function actionAfterScrollCategory(categoryName) {
   var filteredMoviesPrev = filterMovieByCategory(categoryName);
-  displayMoviesList(filteredMoviesPrev);
+  displayMoviesList(filteredMoviesPrev, movieContainer, movieUL);
 }
 
 var scrollToCategoryItem = scrollToElement(selectedCategory, "start");
@@ -43,9 +43,3 @@ var scrollCategoryListItem = scrollListItem(
   1000
 );
 var horizontalScrollCategoryList = horizontalScrollList(scrollCategoryListItem);
-
-// Создание пустого списка категорий
-var categoryUL = createList(2, horizontalScrollCategoryList, setFocusOnCategoryList);
-
-// Создание функции для заполнения списка элементами
-var fillCategoryList = fillList(categoryUL, createCategoryListElement);

@@ -15,6 +15,18 @@ var movieInfo = {
 var movieContainer = document.querySelector(".movie-container");
 var categoryContainer = document.querySelector(".category-container");
 
+var displayMoviesList = displayList(actionIfMovieListNotEmpty, actionIfMovieListEmpty);
+var displayCategoryList = displayList(actionIfCategoryListNotEmpty, actionIfCategoryListEmpty);
 
-displayCategoryList(categoriesList);
-displayMoviesList(moviesList);
+// Создание пустого списка фильмов
+var movieUL = createList(1, horizontalScrollMovieList, setFocusOnMovieList);
+// Создание функции для заполнения списка элементами
+var fillMovieList = fillList(movieUL, createMovieListElement);
+
+// Создание пустого списка категорий
+var categoryUL = createList(2, horizontalScrollCategoryList, setFocusOnCategoryList);
+// Создание функции для заполнения списка элементами
+var fillCategoryList = fillList(categoryUL, createCategoryListElement);
+
+displayCategoryList(categoriesList, categoryContainer, categoryUL);
+displayMoviesList(moviesList, movieContainer, movieUL);

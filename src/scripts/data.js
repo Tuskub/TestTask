@@ -1,14 +1,21 @@
 const categoriesList = [
   "Все фильмы",
+  "Избранное",
   "Комедии",
   "Драмы",
-  "Зарубежные",
   "Мелодрамы",
   "Триллеры",
   "Фэнтези",
   "Боевики",
   "История",
-  "Криминал"
+  "test",
+  "test1",
+  "test2",
+  "test3",
+  "test4",
+  "test5",
+  "test6",
+  "test7",
 ];
 
 const moviesList = [
@@ -102,13 +109,68 @@ const moviesList = [
   },
   {
     id: "9",
-    title: "Аритмия",
-    category: ["Драмы", "Мелодрамы"],
-    year: 2017,
-    country: ["Россия"],
+    title: "Доктор Сон",
+    category: ["Фэнтези", "Триллеры"],
+    year: 2019,
+    country: ["США"],
     age: "18+",
     imdb: 7.4,
-    kinopoisk: 7.7,
-    poster: "src/image/movie/posters/arrhythmia.webp"
+    kinopoisk: 7.2,
+    poster: "src/image/movie/posters/doctor-sleep.webp"
+  },
+  {
+    id: "10",
+    title: "Стекло",
+    category: ["Триллеры"],
+    year: 2019,
+    country: ["США", "Китай"],
+    age: "16+",
+    imdb: 6.7,
+    kinopoisk: 6.4,
+    poster: "src/image/movie/posters/glass.webp"
+  },
+  {
+    id: "11",
+    title: "Превосходство",
+    category: ["Драмы", "Триллеры"],
+    year: 2014,
+    country: ["Великобритания", "Китай"],
+    age: "12+",
+    imdb: 6.3,
+    kinopoisk: 6.5,
+    poster: "src/image/movie/posters/transcendence.webp"
+  },
+  {
+    id: "12",
+    title: "Агент Ева",
+    category: ["Боевики", "Триллеры"],
+    year: 2020,
+    country: ["США"],
+    age: "18+",
+    imdb: 5.3,
+    kinopoisk: 5.3,
+    poster: "src/image/movie/posters/ava.webp"
+  },
+  {
+    id: "13",
+    title: "Дюнкерк",
+    category: ["Драмы", "История"],
+    year: 2017,
+    country: ["Великобритания"],
+    age: "16+",
+    imdb: 7.9,
+    kinopoisk: 7.3,
+    poster: "src/image/movie/posters/dunkirk.webp"
+  },
+  {
+    id: "14",
+    title: "1917",
+    category: ["Боевики", "История"],
+    year: 2019,
+    country: ["США"],
+    age: "16+",
+    imdb: 8.3,
+    kinopoisk: 8.0,
+    poster: "src/image/movie/posters/1917.webp"
   }
 ];
