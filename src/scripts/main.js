@@ -24,9 +24,9 @@ var movieUL = list.create(1, movie.horizontalScrollList, movie.setFocusOnList);
 var fillMovieList = list.fill(movieUL, movie.createListElement);
 
 // Создание пустого списка категорий
-var categoryUL = list.create(2, horizontalScrollCategoryList, setFocusOnCategoryList);
+var categoryUL = list.create(2, category.horizontalScrollList, category.setFocusOnList);
 // Создание функции для заполнения списка элементами
-var fillCategoryList = list.fill(categoryUL, createCategoryListElement);
+var fillCategoryList = list.fill(categoryUL, category.createListElement);
 
 displayCategoryList(categoriesList, categoryContainer, categoryUL);
 displayMoviesList(moviesList, movieContainer, movieUL);

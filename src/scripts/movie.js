@@ -1,25 +1,22 @@
 var movie = (function () {
-
-  var myMovie = { }
-
-  var selectedMovieClass = "selected-movie";
-
-  myMovie.setFocusOnList = verticalFocus.set(selectedMovieClass);
+  var myMovie = {};
+  var _selectedMovie = "selected-movie";
+  myMovie.info = {};
+  myMovie.setFocusOnList = verticalFocus.set(_selectedMovie);
 
   // Конкретная реализация прокрутки для фильмов
-  var actionAfterScrollMovie = function(id) {
+  var _actionAfterScroll = function (id) {
     movie.fillInfo(id);
   }
 
   myMovie.horizontalScrollList = horizontalScroll.create(
-    selectedMovieClass,
+    _selectedMovie,
     "center",
-    actionAfterScrollMovie,
+    _actionAfterScroll,
     "id",
     0
   );
 
-  myMovie.info = {}
   //  Заполняет информацию о фильме в нижней части экрана
   myMovie.fillInfo =  function (id) {
     var movieIndex = moviesList.findIndex(function (movie) {

@@ -1,42 +1,46 @@
-function createCategoryListElement(category) {
-  var li = document.createElement("li");
-  var p = document.createElement("p")
-  p.innerText = category;
-  li.classList.add("category");
-  li.appendChild(p);
-  return li;
-}
-
-//  Возвращает список фильмов которые соответствуют выбранной категории
-function filterMovieByCategory(category) {
-  if (category === "Все фильмы") {
-    return moviesList;
-  }
-  var filteredMovie = [];
-  for (var movie of moviesList) {
-    var index = movie.category.indexOf(category);
-    if (index !== -1) {
-      filteredMovie.push(movie);
+var category = (function () {
+  var myCategory = {};
+  //  css класс для выбранной категории
+  var _selectedCategory = "selected-category";
+  myCategory.setFocusOnList = verticalFocus.set(_selectedCategory);
+  //  Возвращает список фильмов которые соответствуют выбранной категории
+  var _filterMovie = function (category) {
+    if (category === "Все фильмы") {
+      return moviesList;
     }
+    var filteredMovie = [];
+    for (var i = 0; i < moviesList.length; i++) {
+      var index = moviesList[i].category.indexOf(category);
+      if (index !== -1) {
+        filteredMovie.push(moviesList[i]);
+      }
+    }
+    console.log(filteredMovie)
+    return filteredMovie;
+  };
+
+  // Конкретная реализация прокрутки для категорий
+  var _actionAfterScroll = function (categoryName) {
+    var filteredMoviesPrev = _filterMovie(categoryName);
+    displayMoviesList(filteredMoviesPrev, movieContainer, movieUL);
   }
-  return filteredMovie;
-}
 
-// css класс для выбранной категории
-var selectedCategory = "selected-category";
+  myCategory.horizontalScrollList = horizontalScroll.create(
+    _selectedCategory,
+    "start",
+    _actionAfterScroll,
+    "textContent",
+    1000
+  );
 
-var setFocusOnCategoryList = verticalFocus.set(selectedCategory);
+  myCategory.createListElement = function (category) {
+    var li = document.createElement("li");
+    var p = document.createElement("p")
+    p.innerText = category;
+    li.classList.add("category");
+    li.appendChild(p);
+    return li;
+  };
 
-// Конкретная реализация прокрутки для категорий
-function actionAfterScrollCategory(categoryName) {
-  var filteredMoviesPrev = filterMovieByCategory(categoryName);
-  displayMoviesList(filteredMoviesPrev, movieContainer, movieUL);
-}
-
-var horizontalScrollCategoryList = horizontalScroll.create(
-  selectedCategory,
-  "start",
-  actionAfterScrollCategory,
-  "textContent",
-  1000
-);
+  return myCategory;
+})();
