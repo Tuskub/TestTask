@@ -1,22 +1,11 @@
 var Movie = (function () {
   var myMovie = {};
+
   var _selectedMovie = "selected-movie";
+
   myMovie.info = {};
   myMovie.container = null;
   myMovie.setFocusOnList = VerticalFocus.set(_selectedMovie);
-
-  // Конкретная реализация прокрутки для фильмов
-  var _actionAfterScroll = function (id) {
-    Movie.fillInfo(id);
-  }
-
-  myMovie.horizontalScrollList = HorizontalScroll.create(
-    _selectedMovie,
-    "center",
-    _actionAfterScroll,
-    "id",
-    0
-  );
 
   //  Заполняет информацию о фильме в нижней части экрана
   myMovie.fillInfo =  function (id) {
@@ -34,6 +23,19 @@ var Movie = (function () {
     myMovie.info.background.style.backgroundImage = "url('" + selectedMovie.poster + "')";
   };
 
+  // Конкретная реализация прокрутки для фильмов
+  var _actionAfterScroll = function (id) {
+    myMovie.fillInfo(id);
+  }
+
+  myMovie.horizontalScrollList = HorizontalScroll.create(
+    _selectedMovie,
+    "center",
+    _actionAfterScroll,
+    "id",
+    0
+  );
+
   myMovie.createListElement = function (movie) {
     var li = document.createElement("li");
     var img = document.createElement("img");
@@ -45,8 +47,25 @@ var Movie = (function () {
     return li;
   };
 
+  // Создаем объект в котором будут находится фильмы
   myMovie.list = List.create(1, myMovie.horizontalScrollList, myMovie.setFocusOnList);
   myMovie.fillList = List.fill(myMovie.list, myMovie.createListElement);
+
+  myMovie.actionIfListNotEmpty = function (moviesList, container, ul) {
+    ul = myMovie.fillList(moviesList);
+    ul.firstChild.classList.add("selected-movie");
+    myMovie.fillInfo(ul.firstChild.id);
+    container.replaceChild(ul, container.firstChild);
+    document.querySelector(".movie-info").style.visibility = "visible";
+  }
+
+  myMovie.actionIfListEmpty = function (container, ul) {
+    var p = document.createElement("p");
+    p.textContent = "В выбранной категории фильмы отсутствуют";
+    container.replaceChild(p, ul);
+    document.querySelector(".movie-info").style.visibility = "hidden";
+    myMovie.info.background.style.background = "";
+  }
 
   return myMovie;
 })();

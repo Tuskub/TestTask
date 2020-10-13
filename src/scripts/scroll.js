@@ -37,6 +37,7 @@ var HorizontalScroll = (function () {
       };
     };
   };
+
   //  Результирующая функция, которая реализует функцианал перемещения элементов списка
   //  при нажатии на стрелки вправо-влево
   var _horizontalScrollList = function(scrollListItem) {

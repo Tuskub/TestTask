@@ -25,6 +25,7 @@
       <change beforePath="$PROJECT_DIR$/src/scripts/displaylist.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/displaylist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/movie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/scroll.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +106,7 @@
       <workItem from="1602491625547" duration="11401000" />
       <workItem from="1602515599049" duration="10642000" />
       <workItem from="1602565153854" duration="9742000" />
-      <workItem from="1602578044495" duration="16704000" />
+      <workItem from="1602578044495" duration="17999000" />
     </task>
     <servers />
   </component>

@@ -15,8 +15,8 @@ Movie.info = {
 Movie.container = document.querySelector(".movie-container");
 Category.container = document.querySelector(".category-container");
 
-var displayMoviesList = displayList(actionIfMovieListNotEmpty, actionIfMovieListEmpty);
-var displayCategoryList = displayList(actionIfCategoryListNotEmpty, actionIfCategoryListEmpty);
+var displayMoviesList = DisplayList.display(Movie.actionIfListNotEmpty, Movie.actionIfListEmpty);
+var displayCategoryList = DisplayList.display(Category.actionIfListNotEmpty, Category.actionIfListEmpty);
 
 displayCategoryList(categoriesList, Category.container, Category.list);
 displayMoviesList(moviesList, Movie.container, Movie.list);

@@ -1,7 +1,7 @@
 var VerticalFocus = (function () {
- var vertFocus = {};
+  var vertFocus = {};
 
- vertFocus.set = function (cssClass) {
+  vertFocus.set = function (cssClass) {
     return function setFocus (e) {
       var underscoreElement = document.querySelector("." + cssClass);
       underscoreElement.classList.add("underscore");

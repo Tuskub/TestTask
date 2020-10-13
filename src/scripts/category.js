@@ -46,5 +46,13 @@ var Category = (function () {
   myCategory.list = List.create(2, myCategory.horizontalScrollList, myCategory.setFocusOnList);
   myCategory.fillList = List.fill(myCategory.list, myCategory.createListElement);
 
+  myCategory.actionIfListNotEmpty = function (categoriesList, container, ul) {
+    ul = myCategory.fillList(categoriesList);
+    ul.firstChild.classList.add("selected-category");
+    container.appendChild(ul);
+  }
+
+  myCategory.actionIfListEmpty = function actionIfCategoryListEmpty(container, ul) {}
+
   return myCategory;
 })();
