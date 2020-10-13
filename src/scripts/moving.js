@@ -1,4 +1,4 @@
-var verticalFocus = (function () {
+var VerticalFocus = (function () {
  var vertFocus = {};
 
  vertFocus.set = function (cssClass) {

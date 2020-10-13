@@ -1,4 +1,4 @@
-var list = (function () {
+var List = (function () {
   var myList = {}
 
   // Создает объект ul и привязывает к нему переданные события
@@ -7,9 +7,9 @@ var list = (function () {
     ul.classList.add("scrolled-list");
     ul.tabIndex = tabIndex;
     ul.addEventListener("keydown", horizontalScrollList);
-    ul.addEventListener("keydown", verticalFocus.move);
+    ul.addEventListener("keydown", VerticalFocus.move);
     ul.addEventListener("focus", setFocusOnList);
-    ul.addEventListener("blur", verticalFocus.lost);
+    ul.addEventListener("blur", VerticalFocus.lost);
     return ul;
   };
 

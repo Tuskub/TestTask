@@ -1,15 +1,15 @@
-var movie = (function () {
+var Movie = (function () {
   var myMovie = {};
   var _selectedMovie = "selected-movie";
   myMovie.info = {};
-  myMovie.setFocusOnList = verticalFocus.set(_selectedMovie);
+  myMovie.setFocusOnList = VerticalFocus.set(_selectedMovie);
 
   // Конкретная реализация прокрутки для фильмов
   var _actionAfterScroll = function (id) {
-    movie.fillInfo(id);
+    Movie.fillInfo(id);
   }
 
-  myMovie.horizontalScrollList = horizontalScroll.create(
+  myMovie.horizontalScrollList = HorizontalScroll.create(
     _selectedMovie,
     "center",
     _actionAfterScroll,

@@ -1,8 +1,8 @@
-var category = (function () {
+var Category = (function () {
   var myCategory = {};
   //  css класс для выбранной категории
   var _selectedCategory = "selected-category";
-  myCategory.setFocusOnList = verticalFocus.set(_selectedCategory);
+  myCategory.setFocusOnList = VerticalFocus.set(_selectedCategory);
   //  Возвращает список фильмов которые соответствуют выбранной категории
   var _filterMovie = function (category) {
     if (category === "Все фильмы") {
@@ -25,7 +25,7 @@ var category = (function () {
     displayMoviesList(filteredMoviesPrev, movieContainer, movieUL);
   }
 
-  myCategory.horizontalScrollList = horizontalScroll.create(
+  myCategory.horizontalScrollList = HorizontalScroll.create(
     _selectedCategory,
     "start",
     _actionAfterScroll,

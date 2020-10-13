@@ -1,4 +1,4 @@
-var horizontalScroll = (function () {
+var HorizontalScroll = (function () {
   //  Настройка появления элемента при скроле к нему
   var _scrollToElement = function(selectedClass, inline) {
     return function (element) {
