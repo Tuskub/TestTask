@@ -19,14 +19,14 @@ var displayMoviesList = displayList(actionIfMovieListNotEmpty, actionIfMovieList
 var displayCategoryList = displayList(actionIfCategoryListNotEmpty, actionIfCategoryListEmpty);
 
 // Создание пустого списка фильмов
-var movieUL = createList(1, horizontalScrollMovieList, setFocusOnMovieList);
+var movieUL = list.create(1, horizontalScrollMovieList, setFocusOnMovieList);
 // Создание функции для заполнения списка элементами
-var fillMovieList = fillList(movieUL, createMovieListElement);
+var fillMovieList = list.fill(movieUL, createMovieListElement);
 
 // Создание пустого списка категорий
-var categoryUL = createList(2, horizontalScrollCategoryList, setFocusOnCategoryList);
+var categoryUL = list.create(2, horizontalScrollCategoryList, setFocusOnCategoryList);
 // Создание функции для заполнения списка элементами
-var fillCategoryList = fillList(categoryUL, createCategoryListElement);
+var fillCategoryList = list.fill(categoryUL, createCategoryListElement);
 
 displayCategoryList(categoriesList, categoryContainer, categoryUL);
 displayMoviesList(moviesList, movieContainer, movieUL);

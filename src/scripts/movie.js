@@ -27,20 +27,26 @@ function createMovieListElement(movie) {
 
 var selectedMovieClass = "selected-movie";
 
-var setFocusOnMovieList = setFocus(selectedMovieClass);
+var setFocusOnMovieList = verticalFocus.set(selectedMovieClass);
 
 // Конкретная реализация прокрутки для фильмов
 
 function actionAfterScrollMovie(id) {
   fillMovieInfo(id);
 }
-
-var scrollToMovie = scrollToElement(selectedMovieClass, "center");
-var scrollMovieListItem = scrollListItem(
+//
+// var scrollToMovie = scrollToElement(selectedMovieClass, "center");
+// var scrollMovieListItem = scrollListItem(
+//   selectedMovieClass,
+//   scrollToMovie,
+//   actionAfterScrollMovie,
+//   "id",
+//   0
+// );
+var horizontalScrollMovieList = horizontalScroll.create(
   selectedMovieClass,
-  scrollToMovie,
+  "center",
   actionAfterScrollMovie,
   "id",
   0
 );
-var horizontalScrollMovieList = horizontalScrollList(scrollMovieListItem);

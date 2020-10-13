@@ -22,11 +22,10 @@ function filterMovieByCategory(category) {
   return filteredMovie;
 }
 
-
 // css класс для выбранной категории
 var selectedCategory = "selected-category";
 
-var setFocusOnCategoryList = setFocus(selectedCategory);
+var setFocusOnCategoryList = verticalFocus.set(selectedCategory);
 
 // Конкретная реализация прокрутки для категорий
 function actionAfterScrollCategory(categoryName) {
@@ -34,12 +33,10 @@ function actionAfterScrollCategory(categoryName) {
   displayMoviesList(filteredMoviesPrev, movieContainer, movieUL);
 }
 
-var scrollToCategoryItem = scrollToElement(selectedCategory, "start");
-var scrollCategoryListItem = scrollListItem(
+var horizontalScrollCategoryList = horizontalScroll.create(
   selectedCategory,
-  scrollToCategoryItem,
+  "start",
   actionAfterScrollCategory,
   "textContent",
   1000
 );
-var horizontalScrollCategoryList = horizontalScrollList(scrollCategoryListItem);
